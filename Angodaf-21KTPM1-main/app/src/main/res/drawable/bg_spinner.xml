@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <!-- Fill color -->
+            <solid android:color="@color/white" />
+
+            <!-- Border color and width -->
+            <stroke
+                android:width="1dp"
+                android:color="@color/grey" /> <!-- Color of the border -->
+            <corners android:radius="20dp" /> <!-- Radius of the corners -->
+        </shape>
+    </item>
+</selector>

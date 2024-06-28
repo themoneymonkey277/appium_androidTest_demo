@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/fragment1"
+        android:icon="@drawable/baseline_home_24"/>
+    <item
+        android:id="@+id/room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/fragment2"
+        android:icon="@drawable/baseline_bed_24"/>
+    <item
+        android:id="@+id/hotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/fragment3"
+        android:icon="@drawable/baseline_apartment_24"/>
+    <item
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/fragment4"
+        android:icon="@drawable/baseline_bookmark_24"/>
+    <item
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/fragment5"
+        android:icon="@drawable/baseline_person_24"/>
+</menu>

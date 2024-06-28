@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatOfHotel">
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        android:layout_marginStart="60dp"
+        android:gravity="center_vertical"
+        android:text="ALPHA BIRD NHA TRANG"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/border1"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="0dp"
+        android:background="#FF0000" />
+
+    <TextView
+        android:id="@+id/border2"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border1"
+        android:background="#FF6600" />
+
+    <TextView
+        android:id="@+id/border3"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border2"
+        android:background="#00EE00" />
+
+    <TextView
+        android:id="@+id/border4"
+        android:layout_width="83dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border3"
+        android:background="#800080" />
+
+    <TextView
+        android:id="@+id/border5"
+        android:layout_width="83dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border4"
+        android:background="#0000FF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/beach3"
+        android:layout_below="@id/border3">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/empty_result"
+            android:background="#CDFFED"/>
+
+        <EditText
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#DDDDDD"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:hint="Tìm kiếm"
+            android:textColor="#444444"
+            android:textSize="16sp"
+            app:drawableLeftCompat="@drawable/baseline_search_24" />
+
+        <TextView
+            android:id="@+id/notic_empty_3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Bạn chưa có tin nhắn nào!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hotelChatList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textView3"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+    </RelativeLayout>
+</RelativeLayout>

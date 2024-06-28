@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:axmlns="http://schemas.android.com/tools"
+    axmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/AddHotelFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_addHotel_title"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:contentDescription="back"
+            android:src="@drawable/baseline_close_24" />
+
+        <TextView
+            android:id="@+id/addHotel_title"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginEnd="60dp"
+            android:gravity="center"
+            android:text="@string/addHotel_title"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_addHotel_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_addHotel_title">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Tên khách sạn"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lHotelName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Tên khách sạn"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thành phố/ Tỉnh thành"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lHotelName" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lCity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/lHotelName"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/actvCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:completionThreshold="1"
+                    android:hint="Ví dụ: Hà Nội, Nha Trang,..."
+                    android:padding="16dp"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_locationDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Địa chỉ chi tiết"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lCity" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lLocationDetail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/lHotelName"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/tv_locationDetail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Số nhà, tên đường,..."
+                    android:inputType="text"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kinh độ"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lLocationDetail" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lLongitude"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/lHotelName"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/tv_longitude">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Vd: 48.8584"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Vĩ độ"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lLongitude" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lLatitude"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/lHotelName"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/tv_latitude">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Vd: 2.2945"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Đây là khách sạn mấy sao?"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lLatitude" />
+
+            <RatingBar
+                android:id="@+id/ratingBar5"
+                android:layout_width="241dp"
+                android:layout_height="48dp"
+                android:progressTint="@color/orange"
+                android:rating="1"
+                android:stepSize="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/tv_oneStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="1 Sao"
+                android:textColor="@color/orange"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar5"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar5" />
+
+            <TextView
+                android:id="@+id/tv_twoStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Sao"
+                android:textColor="@color/orange"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/ratingBar5"
+                app:layout_constraintHorizontal_bias="0.257"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar5"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar5" />
+
+            <TextView
+                android:id="@+id/tv_threeStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 Sao"
+                android:textColor="@color/orange"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/ratingBar5"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar5"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar5" />
+
+            <TextView
+                android:id="@+id/tv_fourStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Sao"
+                android:textColor="@color/orange"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/ratingBar5"
+                app:layout_constraintHorizontal_bias="0.737"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar5"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar5" />
+
+            <TextView
+                android:id="@+id/tv_fiveStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Sao"
+                android:textColor="@color/orange"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/ratingBar5"
+                app:layout_constraintHorizontal_bias="0.966"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar5"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar5" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Số điện thoại liên hệ"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/tv_threeStar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lPhoneN"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/lHotelName"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Số điện thoại"
+                    android:inputType="phone"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Mô tả khách sạn"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lPhoneN" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/lHotelName"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập mô tả cho khách sạn của bạn.\nVí dụ: ABC Hotel là một khách sạn nằm ở trung tâm thành phố, gần các điểm tham quan nổi tiếng. Khách sạn cung cấp nhiều dịch vụ và tiện nghi. Khách sạn được đánh giá cao về giá cả và tiện nghi phòng."
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_conveniences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tiện nghi hàng đầu"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lDescription" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Các tiện nghi cách nhau bởi dấu: '\\'"
+                android:textColor="#CC000000"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/tv_conveniences" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lConveniences"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/lHotelName"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/tv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ví dụ: Bàn tiếp tân [24 giờ]\\Được phép đưa thú nuôi vào\\Đưa đón sân bay\\Bể bơi [trong nhà]\\Spa\\Bãi đổ xe có nhân viên"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_highlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Điểm nổi bật của khách sạn"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lConveniences" />
+
+            <TextView
+                android:id="@+id/tv_sub_highlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Các điểm nổi bật cách nhau bởi dấu: '\\'"
+                android:textColor="#CC000000"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/tv_highlight" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lHighlight"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/lHotelName"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sub_highlight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ví dụ: Trong nội thành\\Bàn tiếp tân [24 giờ]\\Đưa đón sân bay\\Cách biển Nha Trang 230m"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Giờ check-in"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/lHotelName"
+                app:layout_constraintTop_toBottomOf="@+id/lHighlight" />
+
+            <RelativeLayout
+                android:id="@+id/lay1"
+                android:layout_width="133dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/border_color"
+                app:layout_constraintStart_toStartOf="@+id/lHighlight"
+                app:layout_constraintTop_toBottomOf="@+id/tv_checkin">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    app:srcCompat="?android:attr/actionModeFindDrawable" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lCheckIn"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toEndOf="@+id/imageView6"
+                    app:boxStrokeColor="@color/blue"
+                    app:cursorColor="@color/black"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints="00:00"
+                        android:background="@drawable/border_color2"
+                        android:editable="false"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="hh:mm"
+                        android:inputType="time"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="Giờ check-out"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/lay2"
+                app:layout_constraintTop_toBottomOf="@+id/lHighlight" />
+
+            <RelativeLayout
+                android:id="@+id/lay2"
+                android:layout_width="133dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/border_color"
+                app:layout_constraintStart_toEndOf="@+id/lay1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_checkout">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    app:srcCompat="?android:attr/actionModeFindDrawable" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lCheckOut"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toEndOf="@+id/imageView5"
+                    android:cursorVisible="false"
+                    app:boxStrokeColor="@color/blue"
+                    app:cursorColor="@color/black"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints="23:59"
+                        android:background="@drawable/border_color2"
+                        android:editable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="hh:mm"
+                        android:inputType="time"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giờ check-in phải sớm hơn giờ check-out."
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/tv_checkin"
+                app:layout_constraintTop_toBottomOf="@+id/lay1" />
+
+            <TextView
+                android:id="@+id/tv_paymentMethods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Phương thức thanh toán"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/tv_checkin"
+                app:layout_constraintTop_toBottomOf="@+id/errorText" />
+
+            <CheckBox
+                android:id="@+id/cb_momo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Momo"
+                app:layout_constraintStart_toStartOf="@+id/tv_paymentMethods"
+                app:layout_constraintTop_toBottomOf="@+id/tv_paymentMethods"/>
+
+            <TextView
+                android:id="@+id/tv_merchantCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="Mã doanh nghiệp"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/cb_momo"
+                app:layout_constraintTop_toBottomOf="@+id/cb_momo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lMerchantCode"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:boxStrokeColor="@color/blue"
+                app:cursorColor="@color/black"
+                app:hintEnabled="false"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/lay2"
+                app:layout_constraintStart_toStartOf="@+id/tv_merchantCode"
+                app:layout_constraintTop_toBottomOf="@+id/tv_merchantCode">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Ví dụ: MOMOC2IC20220510"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_momoGuide"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autoLink="web"
+                android:text="Bạn chưa có tài khoản Momo Doanh nghiệp?\nĐăng ký tại https://business.momo.vn"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lMerchantCode"
+                app:layout_constraintTop_toBottomOf="@+id/lMerchantCode" />
+
+            <TextView
+                android:id="@+id/errorText_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phương thức thanh toán không được để trống."
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/tv_checkin"
+                app:layout_constraintTop_toBottomOf="@+id/tv_momoGuide" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_selector"
+                android:text="Tiếp tục"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/lPhoneN"
+                app:layout_constraintStart_toStartOf="@+id/lPhoneN"
+                app:layout_constraintTop_toBottomOf="@+id/errorText_payment" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progress="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/progressBar1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

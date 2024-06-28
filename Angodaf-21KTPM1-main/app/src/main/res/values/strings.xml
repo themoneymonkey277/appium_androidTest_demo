@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">AngodaFake</string>
+    <string name="fragment1">Home</string>
+    <string name="fragment2">My Room</string>
+    <string name="fragment3">My Hotel</string>
+    <string name="fragment4">Bookmark</string>
+    <string name="fragment5">My Profile</string>
+    <string name="bookmarkTittle">Danh sách yêu thích</string>
+    <string name="homeTittle">Tìm kiếm khách sạn</string>
+    <string name="roomTittle">Thông tin phòng</string>
+    <string name="Filter">Chọn lọc</string>
+    <string name="bookmarkAds">Hãy chọn chổ nghỉ này để xem giá mới mất, thấp nhất</string>
+    <string name="r_title">Đơn đặt chỗ của tôi</string>
+    <string name="btn_order">Đặt phòng nào!</string>
+    <string name="content_active_room">Quý khách không có đặt chỗ sắp tới nào!</string>
+    <string name="content_past_room">Quý khách không có đặt chỗ đã hoàn thành gần đây!</string>
+    <string name="content_canceled_room">Quý khách không có đặt chỗ đã hủy gần đây!</string>
+    <string name="r_dateorder">Đặt phòng:</string>
+    <string name="r_id">Mã đặt phòng:</string>
+    <string name="r_nhanphong">Nhận phòng</string>
+    <string name="r_traphong">Trả phòng</string>
+    <string name="btn_removeorder">Hủy đặt phòng</string>
+    <string name="btn_reorder">Đặt phòng lại</string>
+    <string name="titlePurchase">Chi tiết thanh toán</string>
+    <string name="pleaseBuy">Đang giữ giá. Đặt ngay để không vuột mất giá tốt!</string>
+    <string name="i_title">Thông tin đặt phòng</string>
+
+    <string name="v_title">Quản lý Phiếu giảm giá &amp; Ưu đãi</string>
+
+    <string name="rating_title">Đánh giá</string>
+
+    <string name="c_title">Tin nhắn</string>
+
+    <string name="mv_title">Khuyến mãi</string>
+
+    <string name="cmt_title">Nhận xét của tôi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Thông tin khách sạn</string>
+    <string name="timeCountingDown">00:20:00</string>
+    <string name="profile_title">"Chào mừng, Name"</string>
+    <string name="editInfo_title">Hồ sơ cá nhân</string>
+    <string name="addHotel_title">Thêm khách sạn mới</string>
+    <string name="addRoom_title">Thêm phòng khách sạn</string>
+    <string name="myhotel_title">Khách sạn của tôi</string>
+    <string name="bill_title">Danh sách hóa đơn</string>
+    <string name="manageRooms_title">Quản lí phòng</string>
+    <string name="changePw_title">Đổi mật khẩu</string>
+    <string name="default_web_client_id">1042728725800-b7se4ngd29rqup0obou0jqr76orcbr6j.apps.googleusercontent.com</string>
+    <string name="addBill_title">Thêm Hóa đơn mới</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/border_10"
+    android:elevation="5dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/voucher5"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/rewrite"
+        android:layout_toEndOf="@+id/imageView">
+
+        <TextView
+            android:id="@+id/voucher_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:text="Chính sách ưu đãi: Giảm 10%"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/voucher_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voucher_discount"
+            android:text="Đơn tối thiểu &#8363;400.000"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/voucher_discount" />
+
+        <TextView
+            android:id="@+id/voucher_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voucher_min"
+            android:text="Giảm tối đa &#8363;400.000"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/voucher_min" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voucher_max"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Số lượt còn lại: "
+            android:textColor="#3E52FA"
+            app:layout_constraintTop_toBottomOf="@+id/voucher_max" />
+
+        <TextView
+            android:id="@+id/voucher_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voucher_max"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_marginTop="5dp"
+            android:text="10"
+            android:textColor="#3E52FA"
+            app:layout_constraintTop_toBottomOf="@+id/voucher_max" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/rewrite"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/btn_edit_activevoucher"
+        android:text="Chỉnh sửa"
+        android:textColor="@color/white"/>
+</RelativeLayout>

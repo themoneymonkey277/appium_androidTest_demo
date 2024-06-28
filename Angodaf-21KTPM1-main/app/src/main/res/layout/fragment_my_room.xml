@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyRoom">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        app:title="Đơn đặt chỗ của tôi" />
+
+    <TextView
+        android:id="@+id/border1"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="0dp"
+        android:background="#FF0000" />
+
+    <TextView
+        android:id="@+id/border2"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border1"
+        android:background="#FF6600" />
+
+    <TextView
+        android:id="@+id/border3"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border2"
+        android:background="#00EE00" />
+
+    <TextView
+        android:id="@+id/border4"
+        android:layout_width="83dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border3"
+        android:background="#800080" />
+
+    <TextView
+        android:id="@+id/border5"
+        android:layout_width="83dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border4"
+        android:background="#0000FF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/border3">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_handler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabLayout>
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_handler"
+            android:background="@drawable/beach">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0.5dp"/>
+
+            <RelativeLayout
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminateTint="#FFC125" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

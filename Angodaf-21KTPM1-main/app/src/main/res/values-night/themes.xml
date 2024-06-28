@@ -1,0 +1,14 @@
+<resources >
+    <style name="Theme.MyApp" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- ... -->
+        <item name="colorPrimary">@color/bluee</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+    </style>
+    <style name="PopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+    <style name="Theme.AngodaFake" parent="Base.Theme.AngodaFake" />
+    <style name="Theme.MaterialCarousel.materialComp" parent="Theme.Material3.DayNight.NoActionBar"/>
+</resources>

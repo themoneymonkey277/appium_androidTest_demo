@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/border"
+    android:focusable="false"
+    android:elevation="5dp">
+
+    <RelativeLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border2"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="@string/r_dateorder"
+            android:textColor="#3E52FA"
+            android:textSize="16sp"
+            app:drawableLeftCompat="@drawable/baseline_calendar_month_24_blue"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="132dp" />
+
+        <TextView
+            android:id="@+id/time_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@+id/textView"
+            android:gravity="center_vertical"
+            android:text="Th 5, 28 thg 3"
+            android:textColor="#3E52FA"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="95dp"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:text="@string/r_id"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/status1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:background="#E6F1D8"
+            android:textColor="#50A625" />
+
+        <TextView
+            android:id="@+id/status2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:background="#CCCCCC"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/id_order"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@+id/textView1"
+            android:textColor="@color/black"
+            android:text="1190373000" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:background="#A9A9A9" />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1">
+
+        <ImageView
+            android:id="@+id/image_hotel"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/name_hotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/image_hotel"
+            android:text="Hotel Colline de France"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_hotel"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/image_hotel"
+            android:text="@string/r_nhanphong"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:id="@+id/check_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/image_hotel"
+            android:text="Th 5, 28 thg 3"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_hotel"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/textView4"
+            android:text="@string/r_traphong"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:id="@+id/check_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/textView4"
+            android:text="Th 6, 29 thg 3"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/content"
+        android:background="#A9A9A9" />
+
+    <RelativeLayout
+        android:id="@+id/group_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="15dp"
+        android:paddingEnd="30dp"
+        android:layout_below="@+id/line2">
+
+        <Button
+            android:id="@+id/btn_removeorder"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/btn_removeorder"
+            android:text="@string/btn_removeorder"
+            android:textColor="@color/white"
+            android:focusable="false"/>
+
+        <Button
+            android:id="@+id/btn_reorder1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/btn_removeorder"
+            android:background="@drawable/btn_order"
+            android:focusable="false"
+            android:text="@string/btn_reorder"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

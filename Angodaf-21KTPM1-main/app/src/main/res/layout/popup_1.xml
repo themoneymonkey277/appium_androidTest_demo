@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="5dp">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/white"
+                app:srcCompat="@drawable/baseline_close_24" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@+id/btn_close"
+                android:text="Tìm hiểu thêm về phiếu quà tặng"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="15dp"
+                android:background="#A9A9A9" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginTop="15dp"
+                android:text="Cách Áp Dụng Phiếu Giảm Giá"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="15dp"/>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                app:drawableLeftCompat="@drawable/baseline_looks_one_24" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toEndOf="@+id/textView5"
+                android:text="Thu thập phiếu giảm giá và phiếu giảm giá sẽ được lưu trong ví của quý khách."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                app:drawableLeftCompat="@drawable/baseline_looks_two_24" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toEndOf="@+id/textView6"
+                android:text="Chọn chỗ nghỉ có nhãn Đủ tiêu chuẩn nhận khuyến mại để sử dụng phiếu giảm giá của quý khách."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                app:drawableLeftCompat="@drawable/baseline_looks_3_24"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toEndOf="@+id/textView7"
+                android:text="Chọn phiếu giảm giá quý khách muốn áp dụng trên trang thanh toán."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textView4"
+                android:layout_marginTop="15dp"
+                android:background="#A9A9A9" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="15dp"
+                android:text="Các Điều khoản và Điều kiện"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="15dp"/>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView8"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="20dp"
+                android:text="Mã khuyến mại hoặc phiếu giảm giá hợp lệ phải được áp dụng tại trang thanh toán để chúng áp dụng cho việc đặt chỗ của quý khách." />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView9"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Trừ phi có chỉ định khác, mã khuyến mại và phiếu giảm giá không áp dụng cho thuế địa phương, phí dịch vụ, và các phụ phí." />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView10"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Mã khuyến mại và phiếu giảm giá có thể loại trừ các khách sạn, loại phòng, hoặc ưu đãi nhất định." />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView11"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Trừ phi có chỉ định khác, mã khuyến mại và phiếu giảm giá không được chuyển nhượng, không tích lũy và không được kết hợp với các ưu đãi, phần thưởng, hoặc chương trình khách hàng trung thành khác." />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView12"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Mã khuyến mại và phiếu giảm giá không thể được quy đổi hoặc đổi thành tiền mặt, tín dụng, hoặc các sản phẩm khác." />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView13"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Trong trường hợp hủy chỗ, mã khuyến mại hoặc phiếu giảm giá không có giá trị tiền mặt hoặc hoàn trả." />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView14"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Một số mã khuyến mại và phiếu giảm giá có thể chỉ sẵn sàng để dùng ở các lãnh thổ nhất định hoặc cho cư dân các lãnh thổ nhất định." />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView15"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Agoda giữ quyền ngưng việc sử dụng mã khuyến mại hoặc phiếu giảm giá của người dùng nếu họ được coi là đã lạm dụng mã khuyến mại hoặc phiếu giảm giá." />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView16"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Agoda giữ quyền thay đổi các điều khoản mà không cần thông báo trước." />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView17"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:text="Trong trường hợp tranh chấp, quyết định cuối cùng sẽ là của Agoda." />
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

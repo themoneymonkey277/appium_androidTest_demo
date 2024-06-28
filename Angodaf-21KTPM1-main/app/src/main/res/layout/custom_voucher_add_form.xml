@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CAE1FF"
+    tools:context=".VoucherAddForm">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        android:layout_marginStart="60dp"
+        app:title="Tạo Voucher của bạn" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/border1"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="0dp"
+        android:background="#FF0000" />
+
+    <TextView
+        android:id="@+id/border2"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border1"
+        android:background="#FF6600" />
+
+    <TextView
+        android:id="@+id/border3"
+        android:layout_width="82dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border2"
+        android:background="#00EE00" />
+
+    <TextView
+        android:id="@+id/border4"
+        android:layout_width="83dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border3"
+        android:background="#800080" />
+
+    <TextView
+        android:id="@+id/border5"
+        android:layout_width="83dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/border4"
+        android:background="#0000FF" />
+
+    <include
+        android:id="@+id/imageHotel"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/border3"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        layout="@layout/image_circle" />
+
+    <TextView
+        android:id="@+id/nameHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageHotel"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="ALPHA BIRD NHA TRANG"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameHotel"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/limited_price"
+        android:text="Đơn tối thiểu"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/limited_price"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/nameHotel"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/border1"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:hint="500.000"/>
+
+    <TextView
+        android:id="@+id/notic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/limited_price"
+        android:layout_alignStart="@+id/limited_price"
+        android:layout_marginTop="5dp"
+        android:text="*Vui lòng điền vào ô này!"
+        android:textColor="#EE0000" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notic"
+        android:layout_marginHorizontal="30dp"
+        android:padding="5dp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ưu đãi theo phần trăm" />
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ưu đãi theo số tiền cụ thể" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/notic5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_marginTop="5dp"
+        android:text="*Vui lòng chọn loại ưu đãi!"
+        android:textColor="#EE0000" />
+
+    <RelativeLayout
+        android:id="@+id/byPercentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notic5">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/discount_percentage"
+            android:text="Phần trăm ưu đãi"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notic1"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/discount_max"
+            android:text="Tối đa ưu đãi"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/discount_percentage"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border1"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:hint="10"/>
+
+        <TextView
+            android:id="@+id/notic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discount_percentage"
+            android:layout_alignStart="@+id/discount_percentage"
+            android:layout_marginTop="5dp"
+            android:text="*Vui lòng điền vào ô này!"
+            android:textColor="#EE0000" />
+
+        <EditText
+            android:id="@+id/discount_max"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/notic1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border1"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:hint="100.000"/>
+
+        <TextView
+            android:id="@+id/notic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discount_max"
+            android:layout_alignStart="@+id/discount_max"
+            android:layout_marginTop="5dp"
+            android:text="*Vui lòng điền vào ô này!"
+            android:textColor="#EE0000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/byMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/byPercentage">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/discount_money"
+            android:text="Số tiền ưu đãi"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/discount_money"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border1"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:hint="100.000"/>
+
+        <TextView
+            android:id="@+id/notic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discount_money"
+            android:layout_alignStart="@+id/discount_money"
+            android:layout_marginTop="5dp"
+            android:text="*Vui lòng điền vào ô này!"
+            android:textColor="#EE0000" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/byMoney"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/discount_quantity"
+        android:text="Số lượng phát hành"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/discount_quantity"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/byMoney"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/border1"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:hint="10" />
+
+    <TextView
+        android:id="@+id/notic4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/discount_quantity"
+        android:layout_alignStart="@+id/discount_quantity"
+        android:layout_marginTop="5dp"
+        android:text="*Vui lòng điền vào ô này!"
+        android:textColor="#EE0000" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_order"
+        android:text="Tạo Voucher"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

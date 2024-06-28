@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+
+    <Button
+        android:id="@+id/backToList"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/baseline_x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/HomeTittle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="@string/Filter"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/HomeTittle"
+        android:layout_marginTop="0dp">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HomeTittle"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Xếp hạng điểm"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Ô 6+ -->
+                <TextView
+                    android:id="@+id/text_6_plus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="6+               Hài lòng" />
+
+                <!-- Ô 7+ -->
+                <TextView
+                    android:id="@+id/text_7_plus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="7+               Rất tốt" />
+
+                <!-- Ô 8+ -->
+                <TextView
+                    android:id="@+id/text_8_plus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="8+               Tuyệt vời" />
+
+                <!-- Ô 9+ -->
+                <TextView
+                    android:id="@+id/text_9_plus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="9+               Trên cả tuyệt vời" />
+
+            </LinearLayout>
+
+
+            <!-- Giá tiền -->
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Giá tiền"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/continuousSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.MyApp"
+                android:valueFrom="0"
+                android:valueTo="100000000"
+                app:values="@array/initial_slider_values" />
+
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Thành phố"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Checkbox cho thành phố -->
+            <CheckBox
+                android:id="@+id/cbHanoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Hà Nội" />
+
+            <CheckBox
+                android:id="@+id/cbHCM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Hồ Chí Minh" />
+
+            <CheckBox
+                android:id="@+id/cbNhaTrang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Nha Trang" />
+
+            <CheckBox
+                android:id="@+id/cbDaLat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Đà Lạt" />
+
+            <CheckBox
+                android:id="@+id/cbHaiPhong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Hải Phòng" />
+
+            <CheckBox
+                android:id="@+id/cbDaNang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Đà Nẵng" />
+
+            <CheckBox
+                android:id="@+id/cbHue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Huế" />
+
+            <CheckBox
+                android:id="@+id/cbVungTau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Vũng Tàu" />
+
+            <CheckBox
+                android:id="@+id/cbHoiAn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:text="Hội An"
+                android:layout_marginBottom="75dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toStartOf="@+id/buttonOK"
+        android:background="@drawable/rounded_button_delete"
+        android:text="Xóa"
+        android:textColor="#03A9F4"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/rounded_button"
+        android:text="Xem kết quả"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
+
